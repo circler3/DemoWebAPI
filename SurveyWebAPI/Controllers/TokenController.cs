@@ -64,7 +64,7 @@ namespace SurveyWebAPI.Controllers
             var token = new JwtSecurityToken(null,
                 null,
                 claims,
-                expires: DateTime.Now.AddMinutes(1200),
+                expires: DateTime.Now.AddMinutes(120),
                 signingCredentials: credentials);
 
             return new JwtSecurityTokenHandler().WriteToken(token);

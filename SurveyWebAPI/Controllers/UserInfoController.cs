@@ -12,7 +12,9 @@ namespace SurveyWebAPI.Controllers
 {
     [EnableCors("AllowAll")]
     [Route("api/[controller]")]
+    //只有角色为Admin可以访问
     [Authorize(Roles = "Admin")]
+    //如果需要增加种子数据，可以注释上面这行，取消注释下面这一行
     //[AllowAnonymous]
     [ApiController]
     public class UserInfoController : ControllerBase
